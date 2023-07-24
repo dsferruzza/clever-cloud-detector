@@ -1,0 +1,20 @@
+{
+  "name": "clever-cloud-detector",
+  "version": "0.1.0",
+  "description": "A web extension to detect if websites you browse are hosted by Clever Cloud",
+  "scripts": {
+    "prebuild": "tsc --noEmit",
+    "build": "parcel build src/manifest.json --no-optimize"
+  },
+  "author": "David Sferruzza <david.sferruzza@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/config-webextension": "^2.9.3",
+    "@types/webextension-polyfill": "^0.10.1",
+    "parcel": "^2.9.3",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "webextension-polyfill": "^0.10.0"
+  }
+}

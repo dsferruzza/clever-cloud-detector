@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Clever Cloud Detector",
+  "version": "0.1.0",
+  "description": "Detect if websites you browse are hosted by Clever Cloud.",
+  "author": "David Sferruzza",
+  "permissions": ["dns", "storage", "webNavigation", "activeTab", "<all_urls>"],
+  "icons": {
+    "48": "../assets/unknown.svg",
+    "96": "../assets/unknown.svg"
+  },
+  "background": {
+    "scripts": ["background.ts"],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "../assets/no.svg",
+    "../assets/unknown.svg",
+    "../assets/yes.svg"
+  ],
+  "page_action": {
+    "default_icon": "../assets/unknown.svg"
+  }
+}
