@@ -31,7 +31,7 @@ async function check(hostname: string): Promise<Result> {
       return { isHostedByCleverCloud: true, zone: domainMatch[1] };
     } else {
       let zone;
-      for (let ip of answer.addresses) {
+      for (const ip of answer.addresses) {
         const z = await getZoneFromIp(ip);
         if (z !== null) {
           zone = z;
@@ -130,7 +130,7 @@ browser.webNavigation.onCommitted.addListener((e) => {
         } else {
           browser.pageAction.setTitle({
             tabId: e.tabId,
-            title: `This website is hosted by Clever Cloud (they own the domain)`,
+            title: "This website is hosted by Clever Cloud (they own the domain)",
           });
         }
       } else {
