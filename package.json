@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "description": "A web extension to detect if websites you browse are hosted by Clever Cloud",
   "scripts": {
+    "clean:output": "rimraf dist",
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore ./src",
     "check": "tsc --noEmit",
-    "prebuild": "npm run check && npm run lint",
-    "build": "parcel build src/manifest.json --no-optimize"
+    "prebuild": "npm run check && npm run lint && npm run clean:output",
+    "build": "parcel build src/manifest.json --no-optimize",
+    "package": "npm run build && web-ext build -s dist/"
   },
   "author": "David Sferruzza <david.sferruzza@gmail.com>",
   "license": "ISC",
@@ -17,7 +19,9 @@
     "@typescript-eslint/parser": "^6.1.0",
     "eslint": "^8.45.0",
     "parcel": "^2.9.3",
-    "typescript": "^5.1.6"
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.6",
+    "web-ext": "^7.6.2"
   },
   "dependencies": {
     "webextension-polyfill": "^0.10.0"
