@@ -1,7 +1,8 @@
 {
   "name": "clever-cloud-detector",
   "version": "0.1.0",
-  "description": "A web extension to detect if websites you browse are hosted by Clever Cloud",
+  "description": "A web extension to detect if websites you browse are hosted by Clever Cloud.",
+  "private": true,
   "scripts": {
     "clean:output": "rimraf dist",
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore ./src",
@@ -11,7 +12,7 @@
     "package": "npm run build && web-ext build -s dist/"
   },
   "author": "David Sferruzza <david.sferruzza@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@parcel/config-webextension": "^2.9.3",
     "@types/webextension-polyfill": "^0.10.1",
