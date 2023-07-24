@@ -22,9 +22,9 @@ If you visit a website hosted by Clever Cloud, the icon is colored.
 A script activates every time you navigate to a new page.
 It extracts the page's hostname and checks if it is hosted by Clever Cloud using the following heuristics:
 
-- hostname has a domain name that is publicly known to be owned by Clever Cloud (for example: \*.clever-cloud.com)
-- hostname is a CNAME to one of Clever Cloud's frontal domains (for example: domain.par.clever-cloud.com) or to one of its owned domains
-- hostname is a A to one of Clever Cloud's frontal domains (a public endpoint on Clever Cloud's API is used to get the whole list of their zones, then the extension gets the corresponding IPs of every zone using DNS resolution)
+- hostname has a domain name that is publicly known to be owned by Clever Cloud (for example: `*.clever-cloud.com`)
+- hostname is a CNAME to one of Clever Cloud's frontal domains (for example: `domain.par.clever-cloud.com`) or to one of its owned domains
+- hostname is a A to one of Clever Cloud's frontal domains (a public endpoint on Clever Cloud's API is used to get the list of their zones, then the extension gets the corresponding IPs of every zone using DNS resolution)
 
 _Note: IPs of Clever Cloud's frontal web server are cached in session storage to avoid getting them too often, as they are not supposed to change by the hour._
 
