@@ -1,6 +1,7 @@
 # Clever Cloud Detector
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Mozilla Add-on](https://img.shields.io/amo/v/clever-cloud-detector)](https://addons.mozilla.org/firefox/addon/clever-cloud-detector/)
 
 A web extension to detect if websites you browse are hosted by [Clever Cloud](https://www.clever-cloud.com).
 
@@ -34,7 +35,8 @@ If a website is hosted by Clever Cloud by is behind a proxy (such as Cloudflare)
 
 ## How to get it?
 
-Extension is not yet published, so you will need to build it locally and [install it as a temporary extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
+- manual install from extension file (get it from the _Releases_ section or build it yourself)
+- [Firefox](https://addons.mozilla.org/firefox/addon/clever-cloud-detector/)
 
 ## How to build it?
 
