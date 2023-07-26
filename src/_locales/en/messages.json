@@ -1,0 +1,33 @@
+{
+  "extensionName": {
+    "message": "Clever Cloud Detector",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Detect if websites you browse are hosted by Clever Cloud.",
+    "description": "Description of the extension."
+  },
+
+  "pageActionTitleIfYesWithZone" : {
+    "message": "This website is hosted by Clever Cloud (zone = $ZONE$)",
+    "description": "Content of the address bar icon's tooltip if a website is hosted by Clever Cloud and we know on which zone",
+    "placeholders": {
+      "zone": {
+        "content": "$1",
+        "example": "par"
+      }
+    }
+  },
+
+  "pageActionTitleIfYesBecauseOwned" : {
+    "message": "This website is hosted by Clever Cloud (they own the domain)",
+    "description": "Content of the address bar icon's tooltip if a website is hosted by Clever Cloud and we do not know on which zone"
+  },
+
+  "pageActionTitleIfNo" : {
+    "message": "This website is probably not hosted by Clever Cloud",
+    "description": "Content of the address bar icon's tooltip if a website is not hosted by Clever Cloud"
+  }
+
+}

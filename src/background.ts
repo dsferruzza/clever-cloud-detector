@@ -125,12 +125,14 @@ browser.webNavigation.onCommitted.addListener((e) => {
         if (result.zone !== null) {
           browser.pageAction.setTitle({
             tabId: e.tabId,
-            title: `This website is hosted by Clever Cloud (zone = ${result.zone})`,
+            title: browser.i18n.getMessage("pageActionTitleIfYesWithZone", [
+              result.zone,
+            ]),
           });
         } else {
           browser.pageAction.setTitle({
             tabId: e.tabId,
-            title: "This website is hosted by Clever Cloud (they own the domain)",
+            title: browser.i18n.getMessage("pageActionTitleIfYesBecauseOwned"),
           });
         }
       } else {
@@ -140,7 +142,7 @@ browser.webNavigation.onCommitted.addListener((e) => {
         });
         browser.pageAction.setTitle({
           tabId: e.tabId,
-          title: "This website is probably not hosted by Clever Cloud",
+          title: browser.i18n.getMessage("pageActionTitleIfNo"),
         });
       }
 

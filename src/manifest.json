@@ -1,9 +1,10 @@
 {
   "manifest_version": 2,
-  "name": "Clever Cloud Detector",
   "version": "0.1.0",
-  "description": "Detect if websites you browse are hosted by Clever Cloud.",
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
   "author": "David Sferruzza",
+  "default_locale": "en",
   "permissions": ["dns", "storage", "webNavigation", "activeTab", "<all_urls>"],
   "icons": {
     "48": "../assets/unknown.svg",
@@ -14,6 +15,7 @@
     "persistent": false
   },
   "web_accessible_resources": [
+    "_locales/**/messages.json",
     "../assets/no.svg",
     "../assets/unknown.svg",
     "../assets/yes.svg"
