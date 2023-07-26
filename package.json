@@ -1,6 +1,6 @@
 {
   "name": "clever-cloud-detector",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A web extension to detect if websites you browse are hosted by Clever Cloud.",
   "private": true,
   "scripts": {
