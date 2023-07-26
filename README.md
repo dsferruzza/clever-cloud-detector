@@ -28,6 +28,10 @@ It extracts the page's hostname and checks if it is hosted by Clever Cloud using
 
 _Note: IPs of Clever Cloud's frontal web server are cached in session storage to avoid getting them too often, as they are not supposed to change by the hour._
 
+### Limitations
+
+If a website is hosted by Clever Cloud by is behind a proxy (such as Cloudflare), this extension will not able to flag it as hosted by Clever Cloud.
+
 ## How to get it?
 
 Extension is not yet published, so you will need to build it locally and [install it as a temporary extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
