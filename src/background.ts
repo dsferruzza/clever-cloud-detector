@@ -121,7 +121,7 @@ async function getZoneFromIp(ip: string): Promise<string | null> {
 browser.webNavigation.onCommitted.addListener((e) => {
   const hostname = new URL(e.url).hostname;
 
-  if (hostname.length > 0) {
+  if (hostname.length > 0 && "parentFrameId" in e && e.parentFrameId === -1) {
     check(hostname).then(async (result) => {
       if (result.isHostedByCleverCloud) {
         await browser.pageAction.setIcon({
