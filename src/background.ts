@@ -15,10 +15,11 @@ interface Result {
 }
 
 async function check(hostname: string): Promise<Result> {
-  console.log(`Checking if '${hostname}' is hosted by Clever Cloud...`);
+  console.log(`[${hostname}] Checking if it is hosted by Clever Cloud...`);
 
   // Check if hostname is an owned Clever Cloud domain
   if (cleverCloudOwnedDomains.some((r) => r.test(hostname))) {
+    console.log(`[${hostname}] Owned by Clever Cloud`);
     return { isHostedByCleverCloud: true, zone: null };
   } else {
     const answer = await browser.dns.resolve(hostname, ["canonical_name"]);
@@ -28,6 +29,9 @@ async function check(hostname: string): Promise<Result> {
 
     // Check if cannonical hostname is a frontal Clever Cloud domain
     if (domainMatch !== null) {
+      console.log(
+        `[${hostname}] CNAME to one of Clever Cloud's frontal server`
+      );
       return { isHostedByCleverCloud: true, zone: domainMatch[1] };
     } else {
       let zone;
@@ -41,12 +45,15 @@ async function check(hostname: string): Promise<Result> {
 
       // Check if any resolved IP is linked to a Clever Cloud frontal domain
       if (zone !== undefined) {
+        console.log(`[${hostname}] A to one of Clever Cloud's frontal server`);
         return { isHostedByCleverCloud: true, zone };
       } else {
         // Check if cannonical hostname is an owned Clever Cloud domain
         if (cleverCloudOwnedDomains.some((r) => r.test(hostname))) {
+          console.log(`[${hostname}] CNAME to a domain owned by Clever Cloud`);
           return { isHostedByCleverCloud: true, zone: null };
         } else {
+          console.log(`[${hostname}] Not hosted by Clever Cloud`);
           return { isHostedByCleverCloud: false, zone: null };
         }
       }
