@@ -16,8 +16,8 @@
   "devDependencies": {
     "@parcel/config-webextension": "^2.9.3",
     "@types/webextension-polyfill": "^0.10.1",
-    "@typescript-eslint/eslint-plugin": "^6.1.0",
-    "@typescript-eslint/parser": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
     "eslint": "^8.45.0",
     "parcel": "^2.9.3",
     "rimraf": "^5.0.1",
